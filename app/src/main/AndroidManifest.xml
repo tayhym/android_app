@@ -16,6 +16,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <!-- define parent activity for default navigation behaviors-->
+        <activity
+            android:name="com.example.matthew.myapplication.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message"
+            android:parentActivityName="com.example.matthew.myapplication.MainActivity">
+
+            <!--support for older android versions to tell the parent activity class-->
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.matthew.MainActivity"></meta-data>
+        </activity>
     </application>
 
 </manifest>
